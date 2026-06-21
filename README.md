@@ -231,10 +231,221 @@ En la próxima lección aprenderás a agregar comportamientos a tus objetos medi
 ### Lección 5: Fundamentos de POO y programas sencillos (15 minutos)
 
 - **Descripción**: Construye clases con atributos y métodos, y crea un programa POO básico.
-- **Enlace**: [Ver la lección](https://www.youtube.com/watch?v=example-link5)
+- **Enlace**: [Ver la lección](https://youtu.be/TFAB-CRZYLM)
 - **Conclusiones clave**: Encapsulación con getters; construye un simulador de mascotas.
-- **Proyecto final**: [Crea tu aplicación POO](https://replit.com/@your-final-java) 👈 **¡Guarda y comparte!**
+- **Proyecto final**: [Crea tu aplicación POO](https://onlinegdb.com/DoekfD8gr) 👈 **¡Guarda y comparte!**
 
+---
+
+---
+
+## Antes de comenzar
+
+En la lección anterior aprendiste a crear una clase con atributos públicos y a instanciar objetos usando `new`. Ahora darás el siguiente paso: **proteger los datos de tus objetos** y darles comportamientos mediante métodos.
+ 
+---
+
+## Conceptos clave
+
+- **`private`:** palabra reservada que protege un atributo para que no pueda ser modificado directamente desde fuera de la clase.
+- **Constructor:** método especial que se ejecuta automáticamente al crear un objeto con `new`. Sirve para asignar valores iniciales.
+- **Getter:** método público que permite leer el valor de un atributo privado de forma controlada.
+- **Método:** acción que puede realizar un objeto. Se define dentro de la clase.
+- **Encapsulación:** principio de POO que consiste en proteger los datos internos de una clase y controlar el acceso a ellos mediante métodos.
+---
+
+## Analogía
+
+Piensa en un cajero automático 🏧
+
+- El **saldo** de tu cuenta es un atributo `private` — nadie puede cambiar el número directamente.
+- El botón de **"Consultar saldo"** es un getter — te muestra la información sin que puedas editarla.
+- Los botones de **"Depositar"** y **"Retirar"** son métodos — son las únicas formas permitidas de interactuar con tus datos.
+  Una misma clase puede tener muchos objetos, cada uno con sus propios valores protegidos.
+
+---
+
+## ¿Por qué necesitamos `private`?
+
+En la lección anterior, los atributos eran públicos. Eso significa que cualquiera podía escribir:
+
+```java
+mascota1.energia = -999;
+mascota1.nombre = "";
+```
+
+Eso arruinaría el programa. La solución es declarar los atributos como `private` para que solo puedan cambiarse a través de los métodos de la clase.
+ 
+---
+
+## Código explicado en la lección
+
+### Paso 1: Declarar atributos privados
+
+```java
+class Mascota {
+    private String nombre;
+    private int energia;
+    private int felicidad;
+}
+```
+
+### Paso 2: Crear el constructor
+
+```java
+public Mascota(String nombre) {
+    this.nombre    = nombre;
+    this.energia   = 80;
+    this.felicidad = 60;
+}
+```
+
+> `this.nombre` hace referencia al atributo del objeto actual, para diferenciarlo del parámetro que llega al constructor.
+
+### Paso 3: Agregar getters
+
+```java
+public String getNombre()    { return nombre; }
+public int    getEnergia()   { return energia; }
+public int    getFelicidad() { return felicidad; }
+```
+
+### Paso 4: Agregar métodos de acción
+
+```java
+public void comer() {
+    energia = Math.min(100, energia + 20);
+    System.out.println(nombre + " comió. Energía: " + energia);
+}
+ 
+public void jugar() {
+    felicidad = Math.min(100, felicidad + 15);
+    energia   = Math.max(0, energia - 10);
+    System.out.println(nombre + " jugó! Felicidad: " + felicidad);
+}
+ 
+public void dormir() {
+    energia = Math.min(100, energia + 30);
+    System.out.println(nombre + " durmió. Energía: " + energia);
+}
+```
+
+> `Math.min(100, x)` asegura que el valor no supere 100. `Math.max(0, x)` asegura que no baje de 0.
+
+### Paso 5: Crear y usar el objeto en `main`
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Mascota miMascota = new Mascota("Firulais");
+ 
+        System.out.println("Mascota: "   + miMascota.getNombre());
+        System.out.println("Energía:  "  + miMascota.getEnergia());
+        System.out.println("Felicidad: " + miMascota.getFelicidad());
+ 
+        miMascota.comer();
+        miMascota.jugar();
+        miMascota.dormir();
+    }
+}
+```
+ 
+---
+
+## Código completo
+
+```java
+class Mascota {
+    private String nombre;
+    private int energia;
+    private int felicidad;
+ 
+    public Mascota(String nombre) {
+        this.nombre    = nombre;
+        this.energia   = 80;
+        this.felicidad = 60;
+    }
+ 
+    public String getNombre()    { return nombre; }
+    public int    getEnergia()   { return energia; }
+    public int    getFelicidad() { return felicidad; }
+ 
+    public void comer() {
+        energia = Math.min(100, energia + 20);
+        System.out.println(nombre + " comió. Energía: " + energia);
+    }
+ 
+    public void jugar() {
+        felicidad = Math.min(100, felicidad + 15);
+        energia   = Math.max(0, energia - 10);
+        System.out.println(nombre + " jugó! Felicidad: " + felicidad);
+    }
+ 
+    public void dormir() {
+        energia = Math.min(100, energia + 30);
+        System.out.println(nombre + " durmió. Energía: " + energia);
+    }
+ 
+    public String getEstado() {
+        if (energia > 60 && felicidad > 60) return "¡" + nombre + " está genial!";
+        if (energia < 30) return nombre + " está muy cansado/a...";
+        return nombre + " está bien, pero podría mejorar.";
+    }
+}
+ 
+public class Main {
+    public static void main(String[] args) {
+        Mascota miMascota = new Mascota("Firulais");
+ 
+        System.out.println("Mascota: "   + miMascota.getNombre());
+        System.out.println("Energía:  "  + miMascota.getEnergia());
+        System.out.println("Felicidad: " + miMascota.getFelicidad());
+        System.out.println();
+ 
+        miMascota.comer();
+        miMascota.jugar();
+        miMascota.jugar();
+        miMascota.dormir();
+        System.out.println();
+ 
+        System.out.println("--- Estado final ---");
+        System.out.println(miMascota.getEstado());
+        System.out.println("Energía final:   " + miMascota.getEnergia());
+        System.out.println("Felicidad final: " + miMascota.getFelicidad());
+    }
+}
+```
+ 
+---
+
+## Salida esperada en consola
+
+```
+Mascota: Firulais
+Energía:  80
+Felicidad: 60
+ 
+Firulais comió. Energía: 100
+Firulais jugó! Felicidad: 75
+Firulais jugó! Felicidad: 90
+Firulais durmió. Energía: 100
+ 
+--- Estado final ---
+¡Firulais está genial!
+Energía final:   100
+Felicidad final: 90
+```
+ 
+---
+
+## Conclusiones clave
+
+- `private` protege los atributos — nadie puede modificarlos directamente desde fuera de la clase.
+- El **constructor** asigna los valores iniciales al objeto en el momento de crearlo con `new`.
+- Los **getters** son la forma segura de leer atributos privados.
+- Los **métodos** definen las acciones que puede realizar un objeto.
+- `Math.min()` y `Math.max()` sirven para mantener valores dentro de un rango.
+- La **encapsulación** hace que el programa sea más seguro y difícil de romper.
 ---
 
 ### Lección 6: Consejos y próximos pasos (10 minutos)
