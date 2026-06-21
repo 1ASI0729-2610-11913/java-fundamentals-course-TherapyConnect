@@ -17,9 +17,110 @@ Este curso de 1 hora introduce a estudiantes de secundaria a los fundamentos de 
 ### Lección 1: ¿Qué es Java y la Programación? (5 minutos)
 
 - **Descripción**: Aprende qué es la programación y por qué Java es un excelente lenguaje para empezar.
-- **Enlace**: [Ver la lección](https://www.youtube.com/watch?v=example-link1)
+- **Enlace**: [Ver la lección](https://youtu.be/T2J2S79it_E)
 - **Conclusiones clave**: Java se usa para aplicaciones y juegos; los programas son instrucciones para computadoras.
-- **Empieza a programar**: [Abrir Replit - Hola mundo](https://replit.com/@your-starter-java)
+- **Empieza a programar**: [Abrir Online GDB - Hola mundo](https://onlinegdb.com/44biiICnw)
+
+
+
+#### Antes de comenzar
+
+En esta primera lección, aprenderás qué es la programación, al mismo tiempo que conocerás algunas ventajas de Java como un lenguaje de programación introductorio y el como crear una función básica.
+
+
+
+#### Conceptos clave
+
+- **Programación**: proceso de crear instrucciones que una computadora puede ejecutar para resolver problemas o realizar tareas.
+- **Lenguaje de programación**: sistema de reglas y símbolos utilizado para escribir programas informáticos.
+- **Java**: lenguaje de programación orientado a objetos, multiplataforma y ampliamente utilizado en la industria.
+- **Compilación**: proceso de traducir el código fuente a un formato que la computadora puede ejecutar.
+- **Programa**: aplicación o conjunto de instrucciones que realiza una tarea específica.
+
+
+
+#### Analogía
+
+Piensa en un programa como un plato de comida.
+
+- El proceso de preparación la **programación**.
+- El plato de comida representa el **programa**.
+
+
+
+**Paso 1: Crear la clase principal (Main)**
+
+```java
+public class Main {
+    
+}
+```
+
+**Paso 2: Crear la función main**
+
+```java
+public static void main(String[] args)
+{
+
+}
+```
+
+**Paso 3: Crear la función para escribir "Hola  mundo"**
+
+```java
+System.out.println("Hola Mundo");
+```
+
+
+#### Código completo
+
+```java
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Hola Mundo");
+    }
+}
+```
+
+
+#### Conclusiones clave
+
+- La clase **Main** es la principal.
+- **System.out.println** se usa para mostrar textos.
+- Los **atributos** almacenan información sobre los objetos.
+
+
+#### Consejos para trabajar en OnlineGDB
+
+- Selecciona el lenguaje **Java** antes de comenzar.
+- Escribe tu código en el editor principal.
+- Presiona el botón **Run** para ejecutar el programa.
+- Observa la salida en la consola inferior.
+- Si aparece un error, lee cuidadosamente el mensaje mostrado.
+
+
+#### Reto práctico
+
+Crea una función que muestre el siguiente texo: `Me gustan los videojuegos`
+
+👉 **Comienza aquí:** [Plantilla del reto en OnlineGDB](https://onlinegdb.com/Fuc1Q5xmJ)
+
+#### Solución del reto
+
+```java
+public class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Me gustan los videojuegos");
+    }
+}
+```
+
+
+#### Conexión con la siguiente lección
+
+Usarás esta estructura para todos tus códigos en Java
 
 ---
 
@@ -252,13 +353,13 @@ En la próxima lección aprenderás a agregar comportamientos a tus objetos medi
 
 **Todas las actividades prácticas**:
 
-| Lección | Actividad | Empezar a programar |
-|---|---|---|
-| 1 | Hola mundo | [OnlineGDB](https://replit.com/@your-lesson1) |
-| 2 | Variables | [OnlineGDB](https://replit.com/@your-lesson2) |
-| 3 | Bucles | [OnlineGDB](https://jdoodle.com/execute-java-online/your-lesson3) |
-| 4 | Clases y objetos | [OnlineGDB](https://onlinegdb.com/jifAJnELB) |
-| 5 | Programa OOP | [OnlineGDB](https://replit.com/@your-lesson5) |
+| Lección | Actividad        | Empezar a programar                                               |
+|---------|------------------|-------------------------------------------------------------------|
+| 1       | Hola mundo       | [OnlineGDB](https://onlinegdb.com/44biiICnw)                      |
+| 2       | Variables        | [OnlineGDB](https://replit.com/@your-lesson2)                     |
+| 3       | Bucles           | [OnlineGDB](https://jdoodle.com/execute-java-online/your-lesson3) |
+| 4       | Clases y objetos | [OnlineGDB](https://onlinegdb.com/jifAJnELB)                      |
+| 5       | Programa OOP     | [OnlineGDB](https://replit.com/@your-lesson5)                     |
 
 **Cuestionario**: [Prueba de conocimientos](https://kahoot.it/challenge/06862871?challenge-id=b1007c76-83d3-4990-84bb-a073d33aaeea_1781836316781)
 
