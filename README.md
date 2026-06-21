@@ -123,22 +123,369 @@ public class Main {
 Usarás esta estructura para todos tus códigos en Java
 
 ---
+# Secuencia de la Lección
 
-### Lección 2: Variables y tipos de datos (8 minutos)
+## Lección 2: Variables y tipos de datos en Java (8 minutos)
 
-- **Descripción**: Aprende a almacenar datos en Java usando variables.
-- **Enlace**: [Ver la lección](https://www.youtube.com/watch?v=example-link2)
-- **Conclusiones clave**: Usa `int`, `String`; declara como `int age = 15;`
-- **Práctica**: [Clic para programar](https://replit.com/@your-variables-java) 👈 **¡No es necesario registrarse!**
+**Descripción:** Aprende a almacenar información en Java utilizando variables y tipos de datos básicos.
+
+**Enlace:** [Ver la lección](https://youtu.be/8jNeFPP00rk)
+
+**Conclusiones clave:** Las variables permiten guardar datos como nombres, edades y profesiones. En Java se usan tipos como `String` para texto e `int` para números enteros.
+
+**Empieza a programar:** Abrir OnlineGDB - Variables en Java
 
 ---
 
-### Lección 3: Estructuras de control: Decisiones y bucles (10 minutos)
+## Antes de comenzar
 
-- **Descripción**: Toma decisiones con `if-else` y repite tareas con bucles.
-- **Enlace**: [Ver la lección](https://www.youtube.com/watch?v=example-link3)
-- **Conclusiones clave**: `if (age > 12) {}`; `for (int i=0; i<5; i++) {}`
-- **Práctica**: [Clic para programar](https://jdoodle.com/execute-java-online/your-id) 👈 **¡Inicio inmediato!**
+En esta lección aprenderás a usar variables en Java. Las variables sirven para guardar información que luego puede mostrarse o utilizarse dentro de un programa.
+
+Por ejemplo, si queremos guardar el nombre, edad y profesión de una persona, podemos usar variables.
+
+---
+
+## Conceptos clave
+
+* **Variable:** espacio donde se almacena un dato.
+* **Tipo de dato:** indica qué clase de información guarda una variable.
+* **String:** se usa para guardar texto.
+* **int:** se usa para guardar números enteros.
+* **System.out.println:** permite mostrar información en pantalla.
+
+---
+
+## Analogía
+
+Piensa en una variable como una caja con etiqueta.
+
+* La caja representa la variable.
+* La etiqueta indica qué tipo de dato guarda.
+* El contenido es el valor almacenado.
+
+Por ejemplo, una caja llamada `nombre` puede guardar el texto `"Isaac Newton"`.
+
+---
+
+## Paso 1: Crear la clase principal
+
+```java
+public class Main {
+
+}
+```
+
+---
+
+## Paso 2: Crear la función main
+
+```java
+public static void main(String[] args) {
+
+}
+```
+
+---
+
+## Paso 3: Crear variables
+
+```java
+String nombre = "Isaac Newton";
+int edad = 18;
+String profesion = "Físico";
+```
+
+---
+
+## Paso 4: Mostrar los datos en pantalla
+
+```java
+System.out.println("Nombre del estudiante: " + nombre);
+System.out.println("Edad: " + edad);
+System.out.println("Profesión: " + profesion);
+```
+
+---
+
+## Código completo
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String nombre = "Isaac Newton";
+        int edad = 18;
+        String profesion = "Físico";
+
+        System.out.println("Nombre del estudiante: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Profesión: " + profesion);
+    }
+}
+```
+
+---
+
+## Conclusiones clave
+
+* `String` se utiliza para guardar textos.
+* `int` se utiliza para guardar números enteros.
+* Las variables deben tener un nombre y un valor.
+* Para mostrar variables en pantalla se usa `System.out.println`.
+* El símbolo `+` permite unir texto con variables.
+
+---
+
+## Consejos para trabajar en OnlineGDB
+
+* Selecciona el lenguaje Java antes de comenzar.
+* Escribe el código dentro de la clase `Main`.
+* Verifica que cada instrucción termine con punto y coma `;`.
+* Presiona el botón **Run** para ejecutar el programa.
+* Si aparece un error, revisa las comillas, los paréntesis y los nombres de las variables.
+
+---
+
+## Reto práctico
+
+Crea un programa que guarde los datos de un estudiante:
+
+* Nombre
+* Edad
+* Carrera
+
+Luego muestra esos datos en pantalla.
+
+**Ejemplo de salida:**
+
+```text
+Nombre: Ana
+Edad: 20
+Carrera: Ingeniería de Software
+```
+
+---
+
+## Solución del reto
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String nombre = "Ana";
+        int edad = 20;
+        String carrera = "Ingeniería de Software";
+
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Carrera: " + carrera);
+    }
+}
+```
+
+---
+
+## Conexión con la siguiente lección
+
+En la siguiente lección usarás estas variables para tomar decisiones dentro del programa mediante estructuras como `if`, `else` y ciclos `for`.
+
+---
+
+# Lección 3: Estructuras de control: decisiones y bucles en Java (10 minutos)
+
+**Descripción:** Aprende a tomar decisiones usando `if` y `else`, y a repetir instrucciones mediante el ciclo `for`.
+
+**Enlace:** [Ver la lección](https://youtu.be/1G1QCKxN2n4)
+
+**Conclusiones clave:** `if` permite evaluar condiciones, `else` ejecuta una alternativa y `for` permite repetir instrucciones varias veces.
+
+**Empieza a programar:** Abrir OnlineGDB - Condiciones y bucles en Java
+
+---
+
+## Antes de comenzar
+
+En la lección anterior aprendiste a crear variables para guardar información. Ahora aprenderás a usar esas variables para tomar decisiones.
+
+Por ejemplo, podemos revisar si una persona es mayor o menor de edad. También podemos usar un ciclo para mostrar una secuencia de números.
+
+---
+
+## Conceptos clave
+
+* **Condición:** comparación que puede ser verdadera o falsa.
+* **if:** se usa para ejecutar código si una condición se cumple.
+* **else:** se ejecuta cuando la condición no se cumple.
+* **Bucle:** estructura que permite repetir instrucciones.
+* **for:** ciclo que repite una acción un número determinado de veces.
+* **Operador >=:** significa “mayor o igual que”.
+
+---
+
+## Analogía
+
+Piensa en una condición como una regla.
+
+Por ejemplo:
+
+* Si tienes 18 años o más, eres mayor de edad.
+* Si tienes menos de 18 años, eres menor de edad.
+
+El programa revisa la condición y decide qué mensaje mostrar.
+
+---
+
+## Paso 1: Crear variables
+
+```java
+String nombre = "Isaac Newton";
+int edad = 17;
+String profesion = "Físico";
+```
+
+---
+
+## Paso 2: Crear una condición con if
+
+```java
+if (edad >= 18) {
+
+}
+```
+
+---
+
+## Paso 3: Mostrar mensaje si la condición se cumple
+
+```java
+System.out.println("Su nombre es: " + nombre);
+System.out.println("Su profesión es: " + profesion);
+System.out.println("El estudiante es mayor de edad");
+```
+
+---
+
+## Paso 4: Usar else si la condición no se cumple
+
+```java
+else {
+    System.out.println("El estudiante es menor de edad");
+}
+```
+
+---
+
+## Paso 5: Crear un ciclo for
+
+```java
+for (int i = 0; i <= edad; i++) {
+    System.out.println(i);
+}
+```
+
+---
+
+## Código completo
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String nombre = "Isaac Newton";
+        int edad = 17;
+        String profesion = "Físico";
+
+        if (edad >= 18) {
+            System.out.println("Su nombre es: " + nombre);
+            System.out.println("Su profesión es: " + profesion);
+            System.out.println("El estudiante es mayor de edad");
+
+            for (int i = 0; i <= edad; i++) {
+                System.out.println(i);
+            }
+        } else {
+            System.out.println("El estudiante es menor de edad");
+        }
+    }
+}
+```
+
+---
+
+## Explicación del código
+
+El programa guarda el nombre, la edad y la profesión de una persona. Luego revisa si la edad es mayor o igual a 18.
+
+Si la condición se cumple, muestra los datos del estudiante, indica que es mayor de edad y ejecuta un ciclo que imprime números desde 0 hasta la edad.
+
+Si la condición no se cumple, muestra el mensaje: “El estudiante es menor de edad”.
+
+---
+
+## Conclusiones clave
+
+* `if` permite tomar decisiones en el programa.
+* `else` permite ejecutar una alternativa.
+* `for` permite repetir instrucciones.
+* Las condiciones usan operadores como `>=`, `<=`, `==`, `>` y `<`.
+* Las variables pueden usarse dentro de condiciones y ciclos.
+
+---
+
+## Consejos para trabajar en OnlineGDB
+
+* Revisa que la clase se escriba como `public class Main`.
+* Usa `String`, no `Cadena`.
+* Recuerda colocar comillas en los textos.
+* Usa el mismo nombre de variable siempre, por ejemplo `profesion`.
+* No uses tildes en nombres de variables, mejor escribe `profesion`.
+* Verifica que cada llave `{ }` esté correctamente cerrada.
+
+---
+
+## Reto práctico
+
+Crea un programa que guarde los datos de un estudiante:
+
+* Nombre
+* Edad
+* Curso
+
+Luego:
+
+* Si la edad es mayor o igual a 18, muestra que es mayor de edad.
+* Si la edad es menor a 18, muestra que es menor de edad.
+* Usa un ciclo `for` para mostrar los números del 1 al 5.
+
+---
+
+## Solución del reto
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String nombre = "Carlos";
+        int edad = 19;
+        String curso = "Programación";
+
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Curso: " + curso);
+
+        if (edad >= 18) {
+            System.out.println("El estudiante es mayor de edad");
+        } else {
+            System.out.println("El estudiante es menor de edad");
+        }
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Número: " + i);
+        }
+    }
+}
+```
+
+---
+
+## Conexión con la siguiente lección
+
+En la próxima lección aprenderás a organizar mejor tus programas utilizando Programación Orientada a Objetos, creando clases, objetos y atributos.
 
 ---
 
